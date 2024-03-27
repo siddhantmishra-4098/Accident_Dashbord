@@ -11,8 +11,6 @@ data = pd.read_csv(file_path)
 # Title for the dashboard
 st.title('Road Accidents in India')
 
-
-
 # Interactive widgets
 st.sidebar.title('Filters')
 
@@ -35,7 +33,7 @@ filtered_data = data[(data['State'] == selected_state) & (data['City'] == select
 # Display the dataset on the sidebar
 if st.sidebar.checkbox('Show Dataset'):
     st.write(data)
-
+  
 # Show filtered data
 if st.sidebar.checkbox('Show Filtered Dataset'):
     st.info('Filtered Data')
